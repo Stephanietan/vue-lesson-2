@@ -1,8 +1,10 @@
 <template>
   <div>I am the child component
+    <slot name='groan'></slot>
     <p> this is a message from the parent; pls decode it!</p>
     <p> the decoded msg is : {{ decode(msgFromParent) }} </p>
     <p> {{ msgFromParent }} </p>
+    <slot name='moan'></slot>
     <button @click='mutateMsg'>click to mutate msg</button>
   </div>
 </template>
