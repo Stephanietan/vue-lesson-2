@@ -1,6 +1,7 @@
 <template>
-  <div>{{ anotherMsg }}
-    <p> {{ decode(msgFromParent) }} </p>
+  <div>I am the child component
+    <p> this is a message from the parent; pls decode it!</p>
+    <p> the decoded msg is : {{ decode(msgFromParent) }} </p>
   </div>
 </template>
 
