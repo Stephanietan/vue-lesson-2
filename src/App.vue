@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <p>{{ msg }}</p>
     <child-comp></child-comp>
   </div>
