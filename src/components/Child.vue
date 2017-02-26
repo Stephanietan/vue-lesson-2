@@ -1,5 +1,7 @@
 <template>
-  <div>{{ anotherMsg }}</div>
+  <div>
+    <p>I am the child component</p>
+  </div>
 </template>
 
 <script>

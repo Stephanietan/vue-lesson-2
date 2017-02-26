@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>{{ msg }}</p>
+    <p>I am the parent component</p>
     <child-comp></child-comp>
   </div>
 </template>
