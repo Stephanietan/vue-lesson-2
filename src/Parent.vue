@@ -1,19 +1,22 @@
 <template>
   <div>
     <p>I am the parent component</p>
-    <child-comp :msg-from-parent='text' @emitMutateEvent='text = $event' :mutateFn='mutateMe'></child-comp>
+    <child-comp :msg-from-parent='text' @emitMutateEvent='text = $event' :mutateFn='mutateMe' :msg-from-sibling='msgFromSibling'></child-comp>
+    <sibling-comp @siblingMsgEvent='msgFromSibling = $event'></sibling-comp>
   </div>
 </template>
 
 <script>
 import Child from './components/Child.vue';
+import Sibling from './components/Sibling.vue';
 
 export default {
-  components: { 'child-comp' : Child },
+  components: { 'child-comp' : Child , 'sibling-comp' : Sibling },
   data: function() {
     return {
       msg : 'Hello world!',
-      text: 'sedun dnes'
+      text: 'sedun dnes',
+      msgFromSibling: ''
     }
   },
   methods: {
