@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    {{ msg }}
+    <p>{{ msg }}</p>
     <child-comp></child-comp>
   </div>
 </template>
