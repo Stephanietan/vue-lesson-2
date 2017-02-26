@@ -4,12 +4,13 @@
     <p> the decoded msg is : {{ decode(msgFromParent) }} </p>
     <p> {{ msgFromParent }} </p>
     <button @click='mutateMsg'>click to mutate msg</button>
+    <button @click='mutateFn()'>click to mutate msg callback style</button>
   </div>
 </template>
 
 <script>
   export default {
-    props: [ 'msgFromParent' ],
+    props: [ 'msgFromParent', 'mutateFn' ],
     data: function() {
       return {
         anotherMsg: 'Hello Universe!'
