@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>{{ msg }}</p>
-    <child-comp></child-comp>
+    <child-comp msg-from-parent='sedun dnes'></child-comp>
   </div>
 </template>
 
