@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>I am the parent component</p>
-    <child-comp msg-from-parent='sedun dnes'></child-comp>
+    <child-comp :msg-from-parent='text' @emitMutateEvent='text = $event'></child-comp>
   </div>
 </template>
 
@@ -12,7 +12,8 @@ export default {
   components: { 'child-comp' : Child },
   data: function() {
     return {
-      msg : 'Hello world!'
+      msg : 'Hello world!',
+      text: 'sedun dnes'
     }
   }
 }

@@ -2,6 +2,8 @@
   <div>I am the child component
     <p> this is a message from the parent; pls decode it!</p>
     <p> the decoded msg is : {{ decode(msgFromParent) }} </p>
+    <p> {{ msgFromParent }} </p>
+    <button @click='mutateMsg'>click to mutate msg</button>
   </div>
 </template>
 
@@ -16,6 +18,9 @@
     methods: {
       decode: function(str) {
         return str.split('').reverse().join('')
+      },
+      mutateMsg: function() {
+        this.$emit('emitMutateEvent', 'im going to mutate yoouuuu')
       }
     }
   }
