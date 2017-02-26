@@ -1,7 +1,9 @@
 <template>
   <div>
     <p>I am the parent component</p>
-    <child-comp :msg-from-parent='text' @emitMutateEvent='text = $event'></child-comp>
+    <child-comp :msg-from-parent='text' @emitMutateEvent='text = $event'>
+      <h1>im doing this at 1am and Im so tired</h1>
+    </child-comp>
   </div>
 </template>
 
